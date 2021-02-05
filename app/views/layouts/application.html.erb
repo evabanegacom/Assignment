@@ -39,21 +39,21 @@
 						<p class="control button is-info is-inverted">
 							choose a house
 						</p>
-            <%# if user_signed_in? %>
+            <% if user_signed_in? %>
               <p class="control">
-                <%#= link_to current_user.name, edit_user_registration_path, class: "button is-info" %>
+                <%= link_to current_user.name, edit_user_registration_path, class: "button is-info" %>
               </p>
               <p>
-                <%#= link_to "Logout", destroy_user_session_path, method: :delete, class:"button is-info" %>
+                <%= link_to "Logout", destroy_user_session_path, method: :delete, class:"button is-info" %>
               </p>
-            <%# else %>
+            <% else %>
             <p class="control">
-              <%#= link_to 'Sign In', new_user_session_path, class: "button is-info" %>
+              <%= link_to 'Sign In', new_user_session_path, class: "button is-info" %>
             </p>
 						<p class="control">
-              <%#= link_to 'Sign Up', new_user_registration_path, class: "button is-info" %>
+              <%= link_to 'Sign Up', new_user_registration_path, class: "button is-info" %>
             </p>
-            <%# end %>
+            <% end %>
             </div>
 					</div>
 				</div>
