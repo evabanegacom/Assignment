@@ -8,4 +8,8 @@ class User < ApplicationRecord
   has_many :houses
   has_many :complex_buildings
   has_many :commercial_units
+
+  validates :name, presence: true
+  validates :email, uniqueness: true
+  validates :password, presence: true, length: { minimum: 6 }
 end

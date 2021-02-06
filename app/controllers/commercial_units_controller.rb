@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class CommercialUnitsController < ApplicationController
-  before_action :set_commercial_unit, only: %i[ show edit update destroy ]
+  before_action :set_commercial_unit, only: %i[show edit update destroy]
   before_action :authenticate_user!
 
   # GET /commercial_units or /commercial_units.json
@@ -8,8 +10,7 @@ class CommercialUnitsController < ApplicationController
   end
 
   # GET /commercial_units/1 or /commercial_units/1.json
-  def show
-  end
+  def show; end
 
   # GET /commercial_units/new
   def new
@@ -17,8 +18,7 @@ class CommercialUnitsController < ApplicationController
   end
 
   # GET /commercial_units/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /commercial_units or /commercial_units.json
   def create
@@ -26,7 +26,7 @@ class CommercialUnitsController < ApplicationController
 
     respond_to do |format|
       if @commercial_unit.save
-        format.html { redirect_to @commercial_unit, notice: "Commercial unit was successfully created." }
+        format.html { redirect_to @commercial_unit, notice: 'Commercial unit was successfully created.' }
         format.json { render :show, status: :created, location: @commercial_unit }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +39,7 @@ class CommercialUnitsController < ApplicationController
   def update
     respond_to do |format|
       if @commercial_unit.update(commercial_unit_params)
-        format.html { redirect_to @commercial_unit, notice: "Commercial unit was successfully updated." }
+        format.html { redirect_to @commercial_unit, notice: 'Commercial unit was successfully updated.' }
         format.json { render :show, status: :ok, location: @commercial_unit }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,19 +52,20 @@ class CommercialUnitsController < ApplicationController
   def destroy
     @commercial_unit.destroy
     respond_to do |format|
-      format.html { redirect_to commercial_units_url, notice: "Commercial unit was successfully destroyed." }
+      format.html { redirect_to commercial_units_url, notice: 'Commercial unit was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_commercial_unit
-      @commercial_unit = CommercialUnit.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def commercial_unit_params
-      params.require(:commercial_unit).permit(:owner, :address, :shops, :sqmt, :parking, :price, :icon)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_commercial_unit
+    @commercial_unit = CommercialUnit.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def commercial_unit_params
+    params.require(:commercial_unit).permit(:owner, :address, :shops, :sqmt, :parking, :price, :icon)
+  end
 end

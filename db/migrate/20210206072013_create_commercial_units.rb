@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateCommercialUnits < ActiveRecord::Migration[5.2]
   def change
     create_table :commercial_units do |t|

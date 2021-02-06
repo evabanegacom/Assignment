@@ -4,11 +4,11 @@
   <br>
     <p>Category: House</p>
     <p> floors <%= house.floors%></p>
-    <p> Price $<%= house.price%></p>
+    <p> Price $<%= house.price %></p>
     <p> Rooms <%= house.rooms%></p>
     <div class='imgh'><%= image_tag(house.icon, class: 'bigpics') %></div>
     <br>
-    <button>Buy now</button>
+    <%= button_to 'Buy Now', charges_path, method: :post, params: { id: house.id } %>
     <% end %>
   </div>
     <div class='houses'>
@@ -20,7 +20,7 @@
     <p> Rooms <%= unit.parking%></p>
     <div class='imgh'><%= image_tag(unit.icon, class: 'bigpics') %></div>
     <br>
-    <button>Buy Now</button>
+    <%#= button_to 'Buy Now', checkout_create_path, method: :post%>
     <% end %>
     </div>
     <div class='houses'>
@@ -32,7 +32,7 @@
     <p> Square meter <%= building.sqmt%></p>
     <div class='imgh'><%= image_tag(building.icon, class: 'bigpics') %></div>
     <br>
-    <button>Buy Now</button>
+    <%#= button_to 'Buy Now', checkout_create_path, method: :post%>
     <% end %>
   </div>
 </div>
