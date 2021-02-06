@@ -1,0 +1,24 @@
+
+<%= simple_form_for(@house) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <span class='hide'><%= f.input :owner, :input_html => { :value => current_user.name } %></span>
+    <%= f.input :address %>
+    <%= f.input :rooms %>
+    <%= f.input :sqmt %>
+    <%= f.input :floors %>
+    <%= f.input :air_condition %>
+    <%= f.input :price %>
+  </div>
+  <%= f.label :icon, class: 'label' %>
+    <%= f.file_field :icon,
+                required: true,
+                input_html: { autocomplete: "icon" }, direct_upload: true %>
+    </div><br>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

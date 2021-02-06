@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @house.owner %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @house.address %>
+</p>
+
+<p>
+  <strong>Rooms:</strong>
+  <%= @house.rooms %>
+</p>
+
+<p>
+  <strong>Sqmt:</strong>
+  <%= @house.sqmt %>
+</p>
+
+<p>
+  <strong>Floors:</strong>
+  <%= @house.floors %>
+</p>
+
+<p>
+  <strong>Air condition:</strong>
+  <%= @house.air_condition %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @house.price %>
+</p>
+
+<div class='imgh'><%= image_tag(@house.icon, class: 'pics') %></div>
+
+<%= link_to 'Edit', edit_house_path(@house) %> |
+<%= link_to 'Back', houses_path %>
