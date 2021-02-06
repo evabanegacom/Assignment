@@ -23,7 +23,7 @@
   	<nav class="navbar is-info">
   		<div class="navbar-brand">
   		<%= link_to root_path, class: "navbar-item" do %>
-  			<h1 class="title is-5">Houses</h1>
+  			<h1 class="title is-5">Assets</h1>
   		<% end %>
 			<div class="navbar-burger burger" data-target="navbarExample">
 					<span></span>
@@ -37,7 +37,7 @@
           <div class="navbar-item">
 					<div class="field is-grouped">
 						<p class="control button is-info is-inverted">
-							choose a house
+							choose an asset
 						</p>
             <% if user_signed_in? %>
               <p class="control">
@@ -45,6 +45,15 @@
               </p>
               <p>
                 <%= link_to "Logout", destroy_user_session_path, method: :delete, class:"button is-info" %>
+              </p>
+			  <p class='control'>
+                <%= link_to "Add House", new_house_path, class:"button is-info" %>
+              </p>
+			  <p class='control'>
+                <%= link_to "New complex", new_complex_building_path, class:"button is-info" %>
+              </p>
+			  <p class='control'>
+                <%= link_to "Add Unit Building", new_commercial_unit_path, class:"button is-info" %>
               </p>
             <% else %>
             <p class="control">
