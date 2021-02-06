@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  owner: MyString
+  address: MyText
+  shops: 1
+  sqmt: 1
+  parking: 1
+  price: 9.99
+  user: one
+
+two:
+  owner: MyString
+  address: MyText
+  shops: 1
+  sqmt: 1
+  parking: 1
+  price: 9.99
+  user: two

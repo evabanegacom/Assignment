@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Complex Buildings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Owner</th>
+      <th>Address</th>
+      <th>Units</th>
+      <th>Sqmt</th>
+      <th>Price</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @complex_buildings.each do |complex_building| %>
+      <tr>
+        <td><%= complex_building.owner %></td>
+        <td><%= complex_building.address %></td>
+        <td><%= complex_building.units %></td>
+        <td><%= complex_building.sqmt %></td>
+        <td><%= complex_building.price %></td>
+        <td><%= link_to 'Show', complex_building %></td>
+        <td><%= link_to 'Edit', edit_complex_building_path(complex_building) %></td>
+        <td><%= link_to 'Destroy', complex_building, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Complex Building', new_complex_building_path %>

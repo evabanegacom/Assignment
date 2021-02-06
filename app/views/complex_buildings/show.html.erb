@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @complex_building.owner %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @complex_building.address %>
+</p>
+
+<p>
+  <strong>Units:</strong>
+  <%= @complex_building.units %>
+</p>
+
+<p>
+  <strong>Sqmt:</strong>
+  <%= @complex_building.sqmt %>
+</p>
+
+<p>
+  <strong>Price: </strong>
+  $<%= @complex_building.price %>
+</p>
+
+<%= link_to 'Edit', edit_complex_building_path(@complex_building) %> |
+<%= link_to 'Back', complex_buildings_path %>

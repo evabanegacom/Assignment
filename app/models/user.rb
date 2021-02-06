@@ -6,4 +6,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :houses
+  has_many :complex_buildings
+  has_many :commercial_units
 end
