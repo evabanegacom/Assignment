@@ -3,6 +3,7 @@
   <% @houses.each do |house| %>
   <br>
     <p>Category: House</p>
+    <p> Owner <%= house.owner%></p>
     <p> floors <%= house.floors%></p>
     <p> Price $<%= house.price %></p>
     <p> Rooms <%= house.rooms%></p>
@@ -15,6 +16,7 @@
     <br>
       <% @commercial_units.each do |unit| %>
     <p>Category: commercial units</p>
+    <p> Owner <%= unit.owner%></p>
     <p> shops <%= unit.shops%></p>
     <p> Price $<%= unit.price%></p>
     <p> Rooms <%= unit.parking%></p>
@@ -27,6 +29,7 @@
     <br>
   <% @complex_buildings.each do |building| %>
     <p>Category: Complex building</p>
+    <p> Owner <%= building.owner%></p>
     <p> Units <%= building.units%></p>
     <p> Price $<%= building.price%></p>
     <p> Square meter <%= building.sqmt%></p>
