@@ -70,6 +70,12 @@ This project was built using these technologies.
 - $ `git clone git@github.com:evabanegacom/Assignment.git`
 
 - $ Run "rspec" in the console to see the tests run
+
+- $ to make payments use credit card number 4242 4242 4242 4242
+
+- $ Any expiry date beginning from the present day above
+
+- $ Any cvv 3 digit number will do
 <!-- CONTACT -->
 
 👤 **Precious**
