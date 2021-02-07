@@ -20,7 +20,7 @@
     <p> Rooms <%= unit.parking%></p>
     <div class='imgh'><%= image_tag(unit.icon, class: 'bigpics') %></div>
     <br>
-    <%#= button_to 'Buy Now', checkout_create_path, method: :post%>
+    <%= button_to 'Buy Now'%>
     <% end %>
     </div>
     <div class='houses'>
@@ -32,7 +32,7 @@
     <p> Square meter <%= building.sqmt%></p>
     <div class='imgh'><%= image_tag(building.icon, class: 'bigpics') %></div>
     <br>
-    <%#= button_to 'Buy Now', checkout_create_path, method: :post%>
+    <%= button_to 'Buy Now'%>
     <% end %>
   </div>
 </div>
