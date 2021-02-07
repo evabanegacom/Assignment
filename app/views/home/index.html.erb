@@ -8,7 +8,7 @@
     <p> Rooms <%= house.rooms%></p>
     <div class='imgh'><%= image_tag(house.icon, class: 'bigpics') %></div>
     <br>
-    <%= button_to 'Buy Now', charges_path, method: :post, params: { id: house.id } %>
+    <%= button_to 'Buy Now', checkout_create_path, method: :post, params: { id: house.id }, remote: true %>
     <% end %>
   </div>
     <div class='houses'>
