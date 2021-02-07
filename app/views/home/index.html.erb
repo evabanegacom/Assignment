@@ -1,7 +1,7 @@
 <div class='alignment'>
   <div class='houses'>
-  <% @houses.each do |house| %>
-  <br>
+    <% @houses.each do |house| %>
+    <br>
     <p>Category: House</p>
     <p> Owner <%= house.owner%></p>
     <p> floors <%= house.floors%></p>
@@ -12,9 +12,9 @@
     <%= button_to 'Buy Now', checkout_create_path, method: :post, params: { id: house.id }, remote: true, class: 'button is-info is-clickable' %>
     <% end %>
   </div>
-    <div class='houses'>
+  <div class='houses'>
     <br>
-      <% @commercial_units.each do |unit| %>
+    <% @commercial_units.each do |unit| %>
     <p>Category: commercial units</p>
     <p> Owner <%= unit.owner%></p>
     <p> shops <%= unit.shops%></p>
@@ -24,10 +24,10 @@
     <br>
     <%= button_to 'Buy Now', checkout_create_building_path, method: :post, params: { id: unit.id }, remote: true, class: 'button is-info is-clickable' %>
     <% end %>
-    </div>
-    <div class='houses'>
+  </div>
+  <div class='houses'>
     <br>
-  <% @complex_buildings.each do |building| %>
+    <% @complex_buildings.each do |building| %>
     <p>Category: Complex building</p>
     <p> Owner <%= building.owner%></p>
     <p> Units <%= building.units%></p>
