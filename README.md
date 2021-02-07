@@ -69,7 +69,7 @@ This project was built using these technologies.
 
 - $ `git clone git@github.com:evabanegacom/Assignment.git`
 
-- $ Run "rspec" in the console to see the tests
+- $ Run "rspec" in the console to see the tests run
 <!-- CONTACT -->
 
 👤 **Precious**
