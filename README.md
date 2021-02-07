@@ -24,7 +24,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/evabanegacom/assignment/feature">
-    <img src="images/images.jpeg" alt="Logo" width="80" height="80">
+    <img src="images/download.jpeg" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Rails app</h3>
@@ -37,7 +37,6 @@
     <br />
     <a href="https://github.com/evabanegacom/Assignment/issues">Report Bug</a>
     ·
-    <a href="https://github.com/evabanegacom/Assignment/issues">Request Feature</a>
   </p>
 </p>
 
