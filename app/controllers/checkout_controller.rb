@@ -12,7 +12,7 @@ class CheckoutController < ApplicationController
       payment_method_types: ['card'],
       line_items:[{
         name: 'House',
-        amount: house.price,
+        amount: house.price * 100,
         description: 'A house',
         currency: 'usd',
         quantity: 1
@@ -38,7 +38,7 @@ class CheckoutController < ApplicationController
       payment_method_types: ['card'],
       line_items:[{
         name: 'House',
-        amount: complex.price,
+        amount: complex.price * 100,
         description: 'A complex building',
         currency: 'usd',
         quantity: 1
@@ -64,7 +64,7 @@ class CheckoutController < ApplicationController
       payment_method_types: ['card'],
       line_items:[{
         name: 'House',
-        amount: commercial_unit.price,
+        amount: commercial_unit.price * 100,
         description: 'A house',
         currency: 'usd',
         quantity: 1

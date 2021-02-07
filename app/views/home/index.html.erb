@@ -9,7 +9,7 @@
     <p> Rooms <%= house.rooms%></p>
     <div class='imgh'><%= image_tag(house.icon, class: 'bigpics') %></div>
     <br>
-    <%= button_to 'Buy Now', checkout_create_path, method: :post, params: { id: house.id }, remote: true %>
+    <%= button_to 'Buy Now', checkout_create_path, method: :post, params: { id: house.id }, remote: true, class: 'button is-info is-clickable' %>
     <% end %>
   </div>
     <div class='houses'>
@@ -22,7 +22,7 @@
     <p> Rooms <%= unit.parking%></p>
     <div class='imgh'><%= image_tag(unit.icon, class: 'bigpics') %></div>
     <br>
-    <%= button_to 'Buy Now', checkout_create_building_path, method: :post, params: { id: unit.id }, remote: true %>
+    <%= button_to 'Buy Now', checkout_create_building_path, method: :post, params: { id: unit.id }, remote: true, class: 'button is-info is-clickable' %>
     <% end %>
     </div>
     <div class='houses'>
@@ -35,7 +35,7 @@
     <p> Square meter <%= building.sqmt%></p>
     <div class='imgh'><%= image_tag(building.icon, class: 'bigpics') %></div>
     <br>
-    <%= button_to 'Buy Now', checkout_create_complex_path, method: :post, params: { id: building.id }, remote: true %>
+    <%= button_to 'Buy Now', checkout_create_complex_path, method: :post, params: { id: building.id }, remote: true, class: 'button is-info is-clickable' %>
     <% end %>
   </div>
 </div>
